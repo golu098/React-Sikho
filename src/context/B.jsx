@@ -1,10 +1,10 @@
 import React from "react";
-import C from "./context/C.jsx";
+import C from "./C.jsx";
 
-const B=(props)=>{
+const B=()=>{
   return (
     <div>
-      <C greet ={props.greet}/>
+      <C />
       </div>
   )
 }

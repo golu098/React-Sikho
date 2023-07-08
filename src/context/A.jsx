@@ -1,14 +1,20 @@
-import React from 'react';
-import B from './context/B';
+import React,{createContext} from 'react';
+import B from './B';
 
+const GreetContext=createContext();
 const A = () => {
   const greet = "hello";
 
   return (
     <div>
-      <B greet={greet} />
+      <GreetContext.Provider  value={greet} >
+      <B />
+ </GreetContext.Provider>
     </div>
   );
 }
 
 export default A;
+export {GreetContext};
+
+// 3:09:00
